@@ -18,13 +18,11 @@ import {
     baseUrl: baseUrlMainApi,
     headers: headersMainApi,
   });
-
   const newsApi = new NewsApi({
     baseUrl: baseUrlNewsApi,
     apiKey,
   });
-  // 1 аргумент - попап, 2- кнопка отправление формы,
-  // 3 - массив кнопок для закрытия, 4 -массив кнопок для открытия
+
   const login = new Popup(loginConst.popup, loginConst.popupButton, loginConst.arrayClose,
     loginConst.arrayOpen);
   const registration = new Popup(registrationConst.popup, registrationConst.popupButton,
@@ -32,11 +30,9 @@ import {
   const success = new Popup(successConst.popup, successConst.popupButton, successConst.arrayClose,
     successConst.arrayOpen, successConst.flagSuccess);
 
-
   const formLogin = new Form(form, mainApi);
   const formRegistration = new Form(formReg, mainApi, popupSuccess);
   const header = new Header(mainApi);
-
   const createCard = (api, obj, keyWord) => new NewsCard(mainApi, obj, keyWord);
   const newsCardList = new NewsCardList(newsApi, createCard);
 }());
