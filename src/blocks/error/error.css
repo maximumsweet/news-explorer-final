@@ -1,0 +1,19 @@
+@import url("./_popup/error_popup.css");
+@import url("./__name/error__name.css");
+@import url("./__password/error__password.css");
+.error
+{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    position: relative;
+    top: -20px;
+
+    color: #FF0000;
+}
+.error:last-of-type
+{
+  top: 0px;
+}
